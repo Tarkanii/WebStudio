@@ -1,0 +1,26 @@
+:root {
+    --accent-color: #2196F3;
+    --accent-hover-color: #188CE8;
+    --primary-text-color: #212121;
+    --secondary-text-color: #757575;
+    --light-text-color: #FFFFFF;
+    --footer-text-color: rgba(255, 255, 255, 0.6);
+
+    --primary-bg: #FFFFFF;
+    --secondary-bg: #F5F4FA;
+    --footer-bg: #2F303A;
+    --footer-icon-bg: rgba(255, 255, 255, 0.1);
+
+    --primary-border-color: rgba(33, 33, 33, 0.2);
+    --footer-input-border-color: rgba(255, 255, 255, 0.3);
+
+    --primary-icon-color: #AFB1B8;
+    --card-overlay-color: rgb(47, 48, 58, 0.8);
+    --modal-overlay-color: rgba(0, 0, 0, 0.2);
+
+    --primary-font: Roboto, sans-serif;
+    --logo-font: Raleway, sans-serif;
+}
+
+$tablet-break-point: 768px;
+$desktop-break-point: 1200px;
