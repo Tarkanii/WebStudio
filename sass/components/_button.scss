@@ -6,8 +6,8 @@
     color: var(--light-text-color);
     font-size: 16px;
     font-weight: 700;
-    height: 50px;
-    width: 200px;
+    min-height: 50px;
+    min-width: 200px;
     background-color: var(--accent-color);
     border-radius: 4px;
     transition: background-color var(--transition), box-shadow var(--transition);
