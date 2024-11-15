@@ -1,0 +1,49 @@
+.customers-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @include desktop {
+        flex-wrap: nowrap;
+    }
+
+    &__element {
+        width: calc((100% - 30px) / 2);
+        height: 92px;
+
+        @include tablet {
+            width: calc((100% - 2 * 30px) / 3);
+        }
+
+        @include desktop {
+            width: calc((100% - 5 * 30px) / 6);
+        }
+    }
+
+    &__link {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--primary-icon-color);
+        border-radius: 4px;
+        transition: border var(--transition);
+    }
+
+    &__link:hover, &__link:focus {
+        border: 1px solid var(--accent-color);
+    }
+
+    &__icon {
+        fill: var(--primary-icon-color);
+        height: 60px;
+        width: 106px;
+        transition: fill var(--transition);
+    }
+
+    &__link:hover &__icon, &__link:focus &__icon {
+        fill: var(--accent-color);
+    }
+}
