@@ -12,16 +12,15 @@
 
     @include desktop {
         flex-wrap: nowrap;
-        gap: unset;
     }
 
     &__element {
         @include tablet {
-            width: calc(100% / 2 - 30px);
+            width: calc((100% - 30px) / 2);
         }
 
         @include desktop {
-            width: calc(100% / 4 - 30px);
+            width: calc((100% - 30px) / 4);
         }
     }
 }
@@ -32,10 +31,6 @@
 
         @include tablet {
             margin-bottom: unset;
-        }
-
-        @include desktop {
-            margin-right: 30px;
         }
     }
 
