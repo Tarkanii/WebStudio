@@ -22,7 +22,7 @@
         }
 
         @include desktop {
-            width: calc((100% - 30px) / 4);
+            width: calc((100% - 3 * 30px) / 4);
         }
     }
 }
