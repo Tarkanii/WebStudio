@@ -1,0 +1,12 @@
+@import "../abstracts/mixins";
+
+.logo {
+    color: var(--accent-color);
+    font-family: var(--logo-font);
+    font-size: 24px;
+    font-weight: 700;
+
+    @include desktop {
+        font-size: 26px;
+    }
+}

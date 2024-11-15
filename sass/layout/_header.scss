@@ -1,0 +1,268 @@
+@import "../abstracts/mixins";
+
+.header {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+
+    @include tablet {
+        height: 80px;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    &__logo {
+        @include tablet {
+            margin-right: 88px;
+        }
+    }
+}
+
+.header__button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    margin-left: auto;
+    background: none;
+
+    &__icon {
+        height: 100%;
+        width: 100%;
+        fill: var(--primary-text-color);
+        transition: fill var(--transition);
+    }
+
+    &:focus &__icon,
+    &:hover &__icon {
+        fill: var(--accent-color);
+    }
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.header__contacts {
+    display: none;
+
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+    }
+
+    @include desktop {
+        flex-direction: row;
+    }
+
+    &__element:first-child {
+        margin: 0 0 10px 0;
+
+        @include desktop {
+            margin: 0 30px 0 0;
+        }
+    }
+}
+
+.header__contacts__link {
+    display: flex;
+    align-items: center;
+    color: var(--secondary-text-color);
+    font-size: 12px;
+    font-weight: 500;
+    transition: color var(--transition);
+    
+    &:hover, &:focus {
+        color: var(--accent-color);
+    }
+    
+    &__icon {
+        fill: var(--secondary-text-color);
+        margin-right: 8px;
+        transition: fill var(--transition);
+
+        &.icon--envelope {
+            height: 10px;
+            width: 14px;
+        }
+
+        &.icon--smartphone {
+            height: 14px;
+            width: 10px;
+        }
+    }
+
+    &:hover &__icon, &:focus &__icon {
+        fill: var(--accent-color);
+    }
+}
+
+.header__navigation {
+    display: none;
+    height: 100%;
+
+    @include tablet {
+        display: block;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    &__element {
+        &:first-child {
+            margin-right: 51px;
+        }
+
+        &:nth-child(2) {
+            margin-right: 70px;
+        }
+    }
+
+    &__link {
+        position: relative;
+        color: var(--primary-text-color);
+        font-weight: 500;
+        line-height: 1.142;
+        padding: 32px 0;
+        transition: color var(--transition);
+
+        &:focus, &:hover, &.link--active {
+            color: var(--accent-color);
+        }
+        
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            width: 100%;
+            background-color: transparent;
+            border-radius: 2px;
+            transition: background-color var(--transition);
+        }
+
+        &:focus::after, &:hover::after, &.link--active::after {
+            background-color: var(--accent-color);
+        }
+    }
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--primary-bg);
+    overflow: auto;
+    visibility: visible;
+    pointer-events: all;
+    transform: translateX(0);
+    transition: visibility var(--transition), transform var(--transition);
+
+    @include tablet {
+        display: none;
+    }
+
+    &.is-hidden {
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateX(100%);
+    }
+
+    &__container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    &__button {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+    }
+
+}
+
+.menu__navigation {
+    margin-bottom: auto;
+
+    &__element:not(:last-child) {
+        margin-bottom: 32px;
+    }
+}
+
+.menu__navigation__link {
+    color: var(--primary-text-color);
+    font-size: 40px;
+    transition: color var(--transition);
+
+    &:hover, &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.menu__contacts {
+    margin-bottom: 64px;
+
+    &__element:not(:last-child) {
+        margin-bottom: 32px;
+    }
+
+    &__link {
+        color: var(--secondary-text-color);
+        font-weight: 500;
+        transition: color var(--transition);
+
+        &:hover, &:focus {
+            color: var(--accent-color);
+        }
+
+        &.link--phone {
+            font-size: 34px;
+        }
+
+        &.link--mail {
+            font-size: 24px;
+        }
+    }
+}
+
+.menu__socials {
+    display: flex;
+    flex-wrap: wrap;
+    
+    &__link {
+        color: var(--accent-color);
+        font-size: 18px;
+        font-weight: 500;
+        padding: 0 10px 0 0;
+    }
+    
+    &__element:not(:last-child) {
+        margin-right: 10px;
+        
+        .menu__socials__link {
+            border-right: 1px solid var(--primary-border-color);
+        }
+    }
+}
+
+.link--active {
+    color: var(--accent-color);
+}
