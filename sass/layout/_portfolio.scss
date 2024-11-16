@@ -1,0 +1,130 @@
+@import "../abstracts/mixins";
+
+.portfolio-filters {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+
+    @include tablet {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    @include desktop {
+        margin-bottom: 50px;
+    }
+
+    &__element:not(:last-child) {
+        margin: 0 8px 15px 0;
+
+        @include tablet {
+            margin: 0 8px 0 0;
+        }
+    }
+
+    &__button {
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.6;
+        padding: 6px 27px;
+        background-color: var(--secondary-bg);
+        border-radius: 4px;
+        transition: color var(--transition), background-color var(--transition), box-shadow var(--transition);
+
+        &:hover, &:focus, &.selected {
+            color: var(--light-text-color);
+            background-color: var(--accent-color);
+            box-shadow: 0 4px 4px var(--shadow-color);
+        }
+    }
+
+}
+
+.portfolio-showcases {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    &__element {
+        
+        &.is-hidden {
+            display: none;
+        }
+
+        @include tablet {
+            width: calc((100% - 30px) / 2);
+        }
+        
+        @include desktop {
+            width: calc((100% - 2 * 30px) / 3);
+        }
+    }
+    
+    &__info {
+        padding: 20px 24px;
+    }
+
+    &__title {
+        color: var(--primary-text-color);
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 2;
+        margin-bottom: 5px;
+    }
+
+    &__type {
+        color: var(--secondary-text-color);
+        font-size: 16px;
+    }
+
+    &__image {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__caption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        padding: 30px 25px 0;
+        color: var(--light-text-color);
+        font-size: 18px;
+        line-height: 1.55;
+        background-color: var(--accent-color);
+        opacity: 0.9;
+        transform: translateY(101%);
+        transition: transform var(--transition);
+
+        @include tablet {
+            padding: 50px 25px 0;
+        }
+
+        @include desktop {
+            padding: 63px 25px 0;
+        }
+    }
+
+}
+
+.portfolio-showcases__link {
+    display: block;
+    border: 1px solid var(--secondary-border-color);
+    transition: box-shadow var(--transition);
+
+    &:hover, &:focus {
+        box-shadow: 1px 4px 6px 0 var(--shadow-color);
+    }
+
+    &:hover .portfolio-showcases__caption, &:focus .portfolio-showcases__caption {
+        transform: translateY(0);
+    }
+}
