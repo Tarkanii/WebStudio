@@ -1,6 +1,7 @@
 @import "../abstracts/mixins";
 
 .section--footer {
+    margin-top: auto;
     background-color: var(--footer-bg);
 
     @include desktop {
