@@ -16,48 +16,34 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    @include desktop {
-        flex-direction: row;
-        align-items: start;
-    }
-}
-
-.footer__contacts {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+    
     @include tablet {
-        width: 100%;
         flex-direction: row;
+        flex-wrap: wrap;
         align-items: start;
         justify-content: center;
-        margin-bottom: 50px;
     }
 
     @include desktop {
-        width: unset;
-        margin-bottom: unset;
-        justify-content: unset;
+        flex-wrap: nowrap;
+        align-items: center;
     }
 }
 
-.footer__address-container {
+.footer__address__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 232px;
-    margin-bottom: 53px;
+    margin: 0 0 53px 0;
 
     @include tablet {
-        margin-bottom: unset;
-        margin-right: 165px;
+        margin: 0 165px 50px 0;
     }
 
     @include desktop {
         align-items: start;
-        margin-right: 70px;
+        margin: 0 70px 0 0;
     }
 }
 
@@ -65,6 +51,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    letter-spacing: 0.4px;
 
     @include desktop {
         align-items: start;
@@ -175,7 +162,7 @@
     }
 
     &__input {
-        color: var(--footer-text-color);
+        color: var(--light-text-color);
         font-size: 16px;
         width: 100%;
         padding: 15px;
