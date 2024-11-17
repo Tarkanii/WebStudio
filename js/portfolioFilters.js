@@ -7,9 +7,7 @@ export const filtersHandler = () => {
         
         button.addEventListener("click", () => {
             filterButtons.forEach((filter) => {
-                if (!filter.classList.contains("selected")) return;
-                
-                filter.classList.remove("selected");
+                if (filter.classList.contains("selected")) filter.classList.remove("selected");
             })
             button.classList.add("selected");
             
@@ -22,9 +20,7 @@ function filterShowcases(type) {
     const showcaseList = document.querySelectorAll("[data-type]");
     showcaseList.forEach((showcase) => {
         if (type === "all") {
-            if (!showcase.classList.contains("is-hidden")) return;
-            
-            showcase.classList.remove("is-hidden");
+            if (showcase.classList.contains("is-hidden")) showcase.classList.remove("is-hidden");
             return;
         }
 

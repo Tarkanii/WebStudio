@@ -14,7 +14,7 @@
         <header class="header">
             <div class="container header__container">
                 <a class="logo header__logo" href="/">WebStudio</a>
-                <button type="button" class="header__button" data-open>
+                <button type="button" class="header__button" data-menu-open>
                     <svg class="header__button__icon">
                         <use href="./images/sprite.svg#icon-burger-menu"></use>
                     </svg>
@@ -23,7 +23,7 @@
                     <ul class="header__navigation__list">
                         <li class="header__navigation__element"><a class="header__navigation__link" href="/">Studio</a></li>
                         <li class="header__navigation__element"><a class="header__navigation__link link--active" href="/portfolio.html">Portfolio</a></li>
-                        <li class="header__navigation__element"><a class="header__navigation__link" href="/">Contacts</a></li>
+                        <li class="header__navigation__element"><a class="header__navigation__link" href="#footer" data-special-link>Contacts</a></li>
                     </ul>
                 </nav>
                 <ul class="header__contacts">
@@ -46,7 +46,7 @@
                 </ul>
                 <div class="menu is-hidden" data-menu>
                     <div class="container menu__container">
-                        <button type="button" class="header__button menu__button" data-close>
+                        <button type="button" class="header__button menu__button" data-menu-close>
                             <svg class="header__button__icon">
                                 <use href="./images/sprite.svg#icon-close"></use>
                             </svg>
@@ -60,7 +60,7 @@
                                     <a class="menu__navigation__link link--active" href="/portfolio.html">Portfolio</a>
                                 </li>
                                 <li class="menu__navigation__element">
-                                    <a class="menu__navigation__link" href="/">Contacts</a>
+                                    <a class="menu__navigation__link" href="#footer" data-special-link>Contacts</a>
                                 </li>
                             </ul>
                         </nav>
@@ -115,7 +115,7 @@
                     </ul>
                     <ul class="portfolio-showcases">
                         <li class="portfolio-showcases__element" data-type="web">
-                            <a class="portfolio-showcases__link" href="/">
+                            <a class="portfolio-showcases__link" href="/portfolio.html">
                                 <div class="portfolio-showcases__image">
                                     <picture>
                                         <!-- Desktop image -->
@@ -139,7 +139,7 @@
                             </a>
                         </li>
                         <li class="portfolio-showcases__element" data-type="design">
-                            <a class="portfolio-showcases__link" href="/">
+                            <a class="portfolio-showcases__link" href="/portfolio.html">
                                 <div class="portfolio-showcases__image">
                                     <picture>
                                         <!-- Desktop image -->
@@ -163,7 +163,7 @@
                             </a>
                         </li>
                         <li class="portfolio-showcases__element" data-type="app">
-                            <a class="portfolio-showcases__link" href="/">
+                            <a class="portfolio-showcases__link" href="/portfolio.html">
                                 <div class="portfolio-showcases__image">
                                     <picture>
                                         <!-- Desktop image -->
@@ -187,7 +187,7 @@
                             </a>
                         </li>
                         <li class="portfolio-showcases__element" data-type="marketing">
-                            <a class="portfolio-showcases__link" href="/">
+                            <a class="portfolio-showcases__link" href="/portfolio.html">
                                 <div class="portfolio-showcases__image">
                                     <picture>
                                         <!-- Desktop image -->
@@ -211,7 +211,7 @@
                             </a>
                         </li>
                         <li class="portfolio-showcases__element" data-type="app">
-                            <a class="portfolio-showcases__link" href="/">
+                            <a class="portfolio-showcases__link" href="/portfolio.html">
                                 <div class="portfolio-showcases__image">
                                     <picture>
                                         <!-- Desktop image -->
@@ -235,7 +235,7 @@
                             </a>
                         </li>
                         <li class="portfolio-showcases__element" data-type="web">
-                            <a class="portfolio-showcases__link" href="/">
+                            <a class="portfolio-showcases__link" href="/portfolio.html">
                                 <div class="portfolio-showcases__image">
                                     <picture>
                                         <!-- Desktop image -->
@@ -259,7 +259,7 @@
                             </a>
                         </li>
                         <li class="portfolio-showcases__element" data-type="design">
-                            <a class="portfolio-showcases__link" href="/">
+                            <a class="portfolio-showcases__link" href="/portfolio.html">
                                 <div class="portfolio-showcases__image">
                                     <picture>
                                         <!-- Desktop image -->
@@ -283,7 +283,7 @@
                             </a>
                         </li>
                         <li class="portfolio-showcases__element" data-type="marketing">
-                            <a class="portfolio-showcases__link" href="/">
+                            <a class="portfolio-showcases__link" href="/portfolio.html">
                                 <div class="portfolio-showcases__image">
                                     <picture>
                                         <!-- Desktop image -->
@@ -307,7 +307,7 @@
                             </a>
                         </li>
                         <li class="portfolio-showcases__element" data-type="app">
-                            <a class="portfolio-showcases__link" href="/">
+                            <a class="portfolio-showcases__link" href="/portfolio.html">
                                 <div class="portfolio-showcases__image">
                                     <picture>
                                         <!-- Desktop image -->
@@ -335,7 +335,7 @@
             </section>
         </main>
         <!-- Footer Section -->
-        <footer class="section section--footer">
+        <footer class="section section--footer" id="footer">
             <div class="container footer__container">
                 <div class="footer__address__wrapper">
                     <a class="logo footer__logo" href="/">WebStudio</a>
@@ -381,8 +381,8 @@
                 <div class="subscription">
                     <h3 class="footer__title">Subscribe to the newsletter</h3>
                     <form class="subscription__form" action="#">
-                        <input class="subscription__input" placeholder="E-mail" type="email">
-                        <button type="button" class="button button--subscription" type="button">
+                        <input class="subscription__input" placeholder="E-mail" type="email" name="subscription">
+                        <button type="button" class="button subscription__button" type="button">
                             Subscribe
                             <svg class="button__icon">
                                 <use href="./images/sprite.svg#icon-paper-plane"></use>
