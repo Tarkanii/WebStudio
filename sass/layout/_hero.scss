@@ -1,0 +1,61 @@
+@import "../abstracts/mixins";
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 118px 0;
+    margin: 0 auto;
+    max-width: 480px;
+    background-image: linear-gradient(var(--hero-overlay-color), var(--hero-overlay-color)), url("../../images/hero/mobile-hero-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include retina-display {
+        background-image: linear-gradient(var(--hero-overlay-color), var(--hero-overlay-color)), url("../../images/hero/mobile-hero-bg@2x.jpg");
+    }
+
+    @include tablet {
+        max-width: 768px;
+        background-image: linear-gradient(var(--hero-overlay-color), var(--hero-overlay-color)), url("../../images/hero/tablet-hero-bg.jpg");
+
+        @include retina-display {
+            background-image: linear-gradient(var(--hero-overlay-color), var(--hero-overlay-color)), url("../../images/hero/tablet-hero-bg@2x.jpg");
+        }
+    }
+
+    @include desktop {
+        padding: 200px 0;
+        max-width: 1600px;
+        background-image: linear-gradient(var(--hero-overlay-color), var(--hero-overlay-color)), url("../../images/hero/desktop-hero-bg.jpg");
+        
+        @include retina-display {
+            background-image: linear-gradient(var(--hero-overlay-color), var(--hero-overlay-color)), url("../../images/hero/desktop-hero-bg@2x.jpg");
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        color: var(--light-text-color);
+        font-size: 26px;
+        font-weight: 900;
+        line-height: 42px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        text-align: center;
+        max-width: 360px;
+        margin-bottom: 30px;
+
+        @include desktop {
+            font-size: 44px;
+            line-height: 60px;
+            max-width: 696px;
+        }
+    }
+}

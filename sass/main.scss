@@ -1,8 +1,28 @@
+// Utilities
+
 @import "./utilities/variables";
 @import "./utilities/visually-hidden";
+
+// Base
 
 @import "./base/reset";
 @import "./base/common";
 @import "./base/container";
 
+// Components
+
 @import "./components/button";
+@import "./components/logo";
+@import "./components/section";
+
+// Layout
+
+@import "./layout/header";
+@import "./layout/hero";
+@import "./layout/our-advantages";
+@import "./layout/our-activities";
+@import "./layout/our-team";
+@import "./layout/our-customers";
+@import "./layout/footer";
+@import "./layout/portfolio";
+@import "./layout/modal";

@@ -10,5 +10,388 @@
         <title>Portfolio</title>
     </head>
     <body>
+        <!-- Header -->
+        <header class="header">
+            <div class="container header__container">
+                <a class="logo header__logo" href="/">WebStudio</a>
+                <button type="button" class="header__button" data-menu-open>
+                    <svg class="header__button__icon">
+                        <use href="./images/sprite.svg#icon-burger-menu"></use>
+                    </svg>
+                </button>
+                <nav class="header__navigation">
+                    <ul class="header__navigation__list">
+                        <li class="header__navigation__element"><a class="header__navigation__link" href="/">Studio</a></li>
+                        <li class="header__navigation__element"><a class="header__navigation__link link--active" href="/portfolio.html">Portfolio</a></li>
+                        <li class="header__navigation__element"><a class="header__navigation__link" href="#footer" data-special-link>Contacts</a></li>
+                    </ul>
+                </nav>
+                <ul class="header__contacts">
+                    <li class="header__contacts__element">
+                        <a class="header__contacts__link" href="mailto:info@devstudio.com">
+                            <svg class="header__contacts__link__icon icon--envelope">
+                                <use href="./images/sprite.svg#icon-envelope"></use>
+                            </svg>
+                            info@devstudio.com
+                        </a>
+                    </li>
+                    <li class="header__contacts__element">
+                        <a class="header__contacts__link" href="tel:+380961111111">
+                            <svg class="header__contacts__link__icon icon--smartphone">
+                                <use href="./images/sprite.svg#icon-smartphone"></use>
+                            </svg>
+                            +38 096 111 11 11
+                        </a>
+                    </li>
+                </ul>
+                <div class="menu is-hidden" data-menu>
+                    <div class="container menu__container">
+                        <button type="button" class="header__button menu__button" data-menu-close>
+                            <svg class="header__button__icon">
+                                <use href="./images/sprite.svg#icon-close"></use>
+                            </svg>
+                        </button>
+                        <nav class="menu__navigation">
+                            <ul class="menu__navigation__list">
+                                <li class="menu__navigation__element">
+                                    <a class="menu__navigation__link" href="/">Studio</a>
+                                </li>
+                                <li class="menu__navigation__element">
+                                    <a class="menu__navigation__link link--active" href="/portfolio.html">Portfolio</a>
+                                </li>
+                                <li class="menu__navigation__element">
+                                    <a class="menu__navigation__link" href="#footer" data-special-link>Contacts</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <ul class="menu__contacts">
+                            <li class="menu__contacts__element">
+                                <a class="menu__contacts__link link--phone" href="tel:+380961111111">+38 096 111 11 11</a>
+                            </li>
+                            <li class="menu__contacts__element">
+                                <a class="menu__contacts__link link--mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                            </li>
+                        </ul>
+                        <ul class="menu__socials">
+                            <li class="menu__socials__element">
+                                <a class="menu__socials__link" href="/">Instagram</a>
+                            </li>
+                            <li class="menu__socials__element">
+                                <a class="menu__socials__link" href="/">Twitter</a>
+                            </li>
+                            <li class="menu__socials__element">
+                                <a class="menu__socials__link" href="/">Facebook</a>
+                            </li>
+                            <li class="menu__socials__element">
+                                <a class="menu__socials__link" href="/">LinkedIn</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main -->
+        <main>
+            <!-- Portfolio -->
+            <section class="section">
+                <h2 class="visually-hidden">Portfolio</h2>
+                <div class="container">
+                    <ul class="portfolio-filters">
+                        <li class="portfolio-filters__element">
+                            <button class="portfolio-filters__button selected" data-filter="all">All</button>
+                        </li>
+                        <li class="portfolio-filters__element">
+                            <button class="portfolio-filters__button" data-filter="web">Web-sites</button>
+                        </li>
+                        <li class="portfolio-filters__element">
+                            <button class="portfolio-filters__button" data-filter="app">Apps</button>
+                        </li>
+                        <li class="portfolio-filters__element">
+                            <button class="portfolio-filters__button" data-filter="design">Design</button>
+                        </li>
+                        <li class="portfolio-filters__element">
+                            <button class="portfolio-filters__button" data-filter="marketing">Marketing</button>
+                        </li>
+                    </ul>
+                    <ul class="portfolio-showcases">
+                        <li class="portfolio-showcases__element" data-type="web">
+                            <a class="portfolio-showcases__link" href="/portfolio.html">
+                                <div class="portfolio-showcases__image">
+                                    <picture>
+                                        <!-- Desktop image -->
+                                        <source srcset="./images/portfolio/desktop-portfolio-1.webp 1x, ./images/portfolio/desktop-portfolio-1@2x.webp 2x" media="(min-width: 1200px)" type="image/webp">
+                                        <source srcset="./images/portfolio/desktop-portfolio-1.jpg 1x, ./images/portfolio/desktop-portfolio-1@2x.jpg 2x" media="(min-width: 1200px)" type="image/jpg">
+                                        <!-- Tablet image -->
+                                        <source srcset="./images/portfolio/tablet-portfolio-1.webp 1x, ./images/portfolio/tablet-portfolio-1@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                                        <source srcset="./images/portfolio/tablet-portfolio-1.jpg 1x, ./images/portfolio/tablet-portfolio-1@2x.jpg 2x" media="(min-width: 768px)" type="image/jpg">
+                                        <!-- Mobile image -->
+                                        <source srcset="./images/portfolio/mobile-portfolio-1.webp 1x, ./images/portfolio/mobile-portfolio-1@2x.webp 2x" media="(max-width: 767px)" type="image/webp">
+                                        <source srcset="./images/portfolio/mobile-portfolio-1.jpg 1x, ./images/portfolio/mobile-portfolio-1@2x.jpg 2x" media="(max-width: 767px)" type="image/jpg">
+                                        <!-- Default image -->
+                                        <img src="./images/portfolio/mobile-portfolio-1.jpg" alt="Showcase">
+                                    </picture>
+                                    <p class="portfolio-showcases__caption">Technoduck is a state-of-the-art coronavirus distribution platform. Companies use this platform for digital espionage and attacks on competitors' secure servers.</p>
+                                </div>
+                                <div class="portfolio-showcases__info">
+                                    <h3 class="portfolio-showcases__title">Technoduck</h3>
+                                    <p class="portfolio-showcases__type">Web-site</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="portfolio-showcases__element" data-type="design">
+                            <a class="portfolio-showcases__link" href="/portfolio.html">
+                                <div class="portfolio-showcases__image">
+                                    <picture>
+                                        <!-- Desktop image -->
+                                        <source srcset="./images/portfolio/desktop-portfolio-2.webp 1x, ./images/portfolio/desktop-portfolio-2@2x.webp 2x" media="(min-width: 1200px)" type="image/webp">
+                                        <source srcset="./images/portfolio/desktop-portfolio-2.jpg 1x, ./images/portfolio/desktop-portfolio-2@2x.jpg 2x" media="(min-width: 1200px)" type="image/jpg">
+                                        <!-- Tablet image -->
+                                        <source srcset="./images/portfolio/tablet-portfolio-2.webp 1x, ./images/portfolio/tablet-portfolio-2@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                                        <source srcset="./images/portfolio/tablet-portfolio-2.jpg 1x, ./images/portfolio/tablet-portfolio-2@2x.jpg 2x" media="(min-width: 768px)" type="image/jpg">
+                                        <!-- Mobile image -->
+                                        <source srcset="./images/portfolio/mobile-portfolio-2.webp 1x, ./images/portfolio/mobile-portfolio-2@2x.webp 2x" media="(max-width: 767px)" type="image/webp">
+                                        <source srcset="./images/portfolio/mobile-portfolio-2.jpg 1x, ./images/portfolio/mobile-portfolio-2@2x.jpg 2x" media="(max-width: 767px)" type="image/jpg">
+                                        <!-- Default image -->
+                                        <img src="./images/portfolio/mobile-portfolio-2.jpg" alt="Showcase">
+                                    </picture>
+                                    <p class="portfolio-showcases__caption">Technoduck is a state-of-the-art coronavirus distribution platform. Companies use this platform for digital espionage and attacks on competitors' secure servers.</p>
+                                </div>
+                                <div class="portfolio-showcases__info">
+                                    <h3 class="portfolio-showcases__title">Poster New Orlean vs Golden Star</h3>
+                                    <p class="portfolio-showcases__type">Design</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="portfolio-showcases__element" data-type="app">
+                            <a class="portfolio-showcases__link" href="/portfolio.html">
+                                <div class="portfolio-showcases__image">
+                                    <picture>
+                                        <!-- Desktop image -->
+                                        <source srcset="./images/portfolio/desktop-portfolio-3.webp 1x, ./images/portfolio/desktop-portfolio-3@2x.webp 2x" media="(min-width: 1200px)" type="image/webp">
+                                        <source srcset="./images/portfolio/desktop-portfolio-3.jpg 1x, ./images/portfolio/desktop-portfolio-3@2x.jpg 2x" media="(min-width: 1200px)" type="image/jpg">
+                                        <!-- Tablet image -->
+                                        <source srcset="./images/portfolio/tablet-portfolio-3.webp 1x, ./images/portfolio/tablet-portfolio-3@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                                        <source srcset="./images/portfolio/tablet-portfolio-3.jpg 1x, ./images/portfolio/tablet-portfolio-3@2x.jpg 2x" media="(min-width: 768px)" type="image/jpg">
+                                        <!-- Mobile image -->
+                                        <source srcset="./images/portfolio/mobile-portfolio-3.webp 1x, ./images/portfolio/mobile-portfolio-3@2x.webp 2x" media="(max-width: 767px)" type="image/webp">
+                                        <source srcset="./images/portfolio/mobile-portfolio-3.jpg 1x, ./images/portfolio/mobile-portfolio-3@2x.jpg 2x" media="(max-width: 767px)" type="image/jpg">
+                                        <!-- Default image -->
+                                        <img src="./images/portfolio/mobile-portfolio-3.jpg" alt="Showcase">
+                                    </picture>
+                                    <p class="portfolio-showcases__caption">Technoduck is a state-of-the-art coronavirus distribution platform. Companies use this platform for digital espionage and attacks on competitors' secure servers.</p>
+                                </div>
+                                <div class="portfolio-showcases__info">
+                                    <h3 class="portfolio-showcases__title">Seafood Restaurant</h3>
+                                    <p class="portfolio-showcases__type">Apps</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="portfolio-showcases__element" data-type="marketing">
+                            <a class="portfolio-showcases__link" href="/portfolio.html">
+                                <div class="portfolio-showcases__image">
+                                    <picture>
+                                        <!-- Desktop image -->
+                                        <source srcset="./images/portfolio/desktop-portfolio-4.webp 1x, ./images/portfolio/desktop-portfolio-4@2x.webp 2x" media="(min-width: 1200px)" type="image/webp">
+                                        <source srcset="./images/portfolio/desktop-portfolio-4.jpg 1x, ./images/portfolio/desktop-portfolio-4@2x.jpg 2x" media="(min-width: 1200px)" type="image/jpg">
+                                        <!-- Tablet image -->
+                                        <source srcset="./images/portfolio/tablet-portfolio-4.webp 1x, ./images/portfolio/tablet-portfolio-4@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                                        <source srcset="./images/portfolio/tablet-portfolio-4.jpg 1x, ./images/portfolio/tablet-portfolio-4@2x.jpg 2x" media="(min-width: 768px)" type="image/jpg">
+                                        <!-- Mobile image -->
+                                        <source srcset="./images/portfolio/mobile-portfolio-4.webp 1x, ./images/portfolio/mobile-portfolio-4@2x.webp 2x" media="(max-width: 767px)" type="image/webp">
+                                        <source srcset="./images/portfolio/mobile-portfolio-4.jpg 1x, ./images/portfolio/mobile-portfolio-4@2x.jpg 2x" media="(max-width: 767px)" type="image/jpg">
+                                        <!-- Default image -->
+                                        <img src="./images/portfolio/mobile-portfolio-4.jpg" alt="Showcase">
+                                    </picture>
+                                    <p class="portfolio-showcases__caption">Technoduck is a state-of-the-art coronavirus distribution platform. Companies use this platform for digital espionage and attacks on competitors' secure servers.</p>
+                                </div>
+                                <div class="portfolio-showcases__info">
+                                    <h3 class="portfolio-showcases__title">Project Prime</h3>
+                                    <p class="portfolio-showcases__type">Marketing</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="portfolio-showcases__element" data-type="app">
+                            <a class="portfolio-showcases__link" href="/portfolio.html">
+                                <div class="portfolio-showcases__image">
+                                    <picture>
+                                        <!-- Desktop image -->
+                                        <source srcset="./images/portfolio/desktop-portfolio-5.webp 1x, ./images/portfolio/desktop-portfolio-5@2x.webp 2x" media="(min-width: 1200px)" type="image/webp">
+                                        <source srcset="./images/portfolio/desktop-portfolio-5.jpg 1x, ./images/portfolio/desktop-portfolio-5@2x.jpg 2x" media="(min-width: 1200px)" type="image/jpg">
+                                        <!-- Tablet image -->
+                                        <source srcset="./images/portfolio/tablet-portfolio-5.webp 1x, ./images/portfolio/tablet-portfolio-5@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                                        <source srcset="./images/portfolio/tablet-portfolio-5.jpg 1x, ./images/portfolio/tablet-portfolio-5@2x.jpg 2x" media="(min-width: 768px)" type="image/jpg">
+                                        <!-- Mobile image -->
+                                        <source srcset="./images/portfolio/mobile-portfolio-5.webp 1x, ./images/portfolio/mobile-portfolio-5@2x.webp 2x" media="(max-width: 767px)" type="image/webp">
+                                        <source srcset="./images/portfolio/mobile-portfolio-5.jpg 1x, ./images/portfolio/mobile-portfolio-5@2x.jpg 2x" media="(max-width: 767px)" type="image/jpg">
+                                        <!-- Default image -->
+                                        <img src="./images/portfolio/mobile-portfolio-5.jpg" alt="Showcase">
+                                    </picture>
+                                    <p class="portfolio-showcases__caption">Technoduck is a state-of-the-art coronavirus distribution platform. Companies use this platform for digital espionage and attacks on competitors' secure servers.</p>
+                                </div>
+                                <div class="portfolio-showcases__info">
+                                    <h3 class="portfolio-showcases__title">Project Boxes</h3>
+                                    <p class="portfolio-showcases__type">Apps</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="portfolio-showcases__element" data-type="web">
+                            <a class="portfolio-showcases__link" href="/portfolio.html">
+                                <div class="portfolio-showcases__image">
+                                    <picture>
+                                        <!-- Desktop image -->
+                                        <source srcset="./images/portfolio/desktop-portfolio-6.webp 1x, ./images/portfolio/desktop-portfolio-6@2x.webp 2x" media="(min-width: 1200px)" type="image/webp">
+                                        <source srcset="./images/portfolio/desktop-portfolio-6.jpg 1x, ./images/portfolio/desktop-portfolio-6@2x.jpg 2x" media="(min-width: 1200px)" type="image/jpg">
+                                        <!-- Tablet image -->
+                                        <source srcset="./images/portfolio/tablet-portfolio-6.webp 1x, ./images/portfolio/tablet-portfolio-6@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                                        <source srcset="./images/portfolio/tablet-portfolio-6.jpg 1x, ./images/portfolio/tablet-portfolio-6@2x.jpg 2x" media="(min-width: 768px)" type="image/jpg">
+                                        <!-- Mobile image -->
+                                        <source srcset="./images/portfolio/mobile-portfolio-6.webp 1x, ./images/portfolio/mobile-portfolio-6@2x.webp 2x" media="(max-width: 767px)" type="image/webp">
+                                        <source srcset="./images/portfolio/mobile-portfolio-6.jpg 1x, ./images/portfolio/mobile-portfolio-6@2x.jpg 2x" media="(max-width: 767px)" type="image/jpg">
+                                        <!-- Default image -->
+                                        <img src="./images/portfolio/mobile-portfolio-6.jpg" alt="Showcase">
+                                    </picture>
+                                    <p class="portfolio-showcases__caption">Technoduck is a state-of-the-art coronavirus distribution platform. Companies use this platform for digital espionage and attacks on competitors' secure servers.</p>
+                                </div>
+                                <div class="portfolio-showcases__info">
+                                    <h3 class="portfolio-showcases__title">Inspiration has no Borders</h3>
+                                    <p class="portfolio-showcases__type">Web-site</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="portfolio-showcases__element" data-type="design">
+                            <a class="portfolio-showcases__link" href="/portfolio.html">
+                                <div class="portfolio-showcases__image">
+                                    <picture>
+                                        <!-- Desktop image -->
+                                        <source srcset="./images/portfolio/desktop-portfolio-7.webp 1x, ./images/portfolio/desktop-portfolio-7@2x.webp 2x" media="(min-width: 1200px)" type="image/webp">
+                                        <source srcset="./images/portfolio/desktop-portfolio-7.jpg 1x, ./images/portfolio/desktop-portfolio-7@2x.jpg 2x" media="(min-width: 1200px)" type="image/jpg">
+                                        <!-- Tablet image -->
+                                        <source srcset="./images/portfolio/tablet-portfolio-7.webp 1x, ./images/portfolio/tablet-portfolio-7@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                                        <source srcset="./images/portfolio/tablet-portfolio-7.jpg 1x, ./images/portfolio/tablet-portfolio-7@2x.jpg 2x" media="(min-width: 768px)" type="image/jpg">
+                                        <!-- Mobile image -->
+                                        <source srcset="./images/portfolio/mobile-portfolio-7.webp 1x, ./images/portfolio/mobile-portfolio-7@2x.webp 2x" media="(max-width: 767px)" type="image/webp">
+                                        <source srcset="./images/portfolio/mobile-portfolio-7.jpg 1x, ./images/portfolio/mobile-portfolio-7@2x.jpg 2x" media="(max-width: 767px)" type="image/jpg">
+                                        <!-- Default image -->
+                                        <img src="./images/portfolio/mobile-portfolio-7.jpg" alt="Showcase">
+                                    </picture>
+                                    <p class="portfolio-showcases__caption">Technoduck is a state-of-the-art coronavirus distribution platform. Companies use this platform for digital espionage and attacks on competitors' secure servers.</p>
+                                </div>
+                                <div class="portfolio-showcases__info">
+                                    <h3 class="portfolio-showcases__title">Limited Edition</h3>
+                                    <p class="portfolio-showcases__type">Design</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="portfolio-showcases__element" data-type="marketing">
+                            <a class="portfolio-showcases__link" href="/portfolio.html">
+                                <div class="portfolio-showcases__image">
+                                    <picture>
+                                        <!-- Desktop image -->
+                                        <source srcset="./images/portfolio/desktop-portfolio-8.webp 1x, ./images/portfolio/desktop-portfolio-8@2x.webp 2x" media="(min-width: 1200px)" type="image/webp">
+                                        <source srcset="./images/portfolio/desktop-portfolio-8.jpg 1x, ./images/portfolio/desktop-portfolio-8@2x.jpg 2x" media="(min-width: 1200px)" type="image/jpg">
+                                        <!-- Tablet image -->
+                                        <source srcset="./images/portfolio/tablet-portfolio-8.webp 1x, ./images/portfolio/tablet-portfolio-8@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                                        <source srcset="./images/portfolio/tablet-portfolio-8.jpg 1x, ./images/portfolio/tablet-portfolio-8@2x.jpg 2x" media="(min-width: 768px)" type="image/jpg">
+                                        <!-- Mobile image -->
+                                        <source srcset="./images/portfolio/mobile-portfolio-8.webp 1x, ./images/portfolio/mobile-portfolio-8@2x.webp 2x" media="(max-width: 767px)" type="image/webp">
+                                        <source srcset="./images/portfolio/mobile-portfolio-8.jpg 1x, ./images/portfolio/mobile-portfolio-8@2x.jpg 2x" media="(max-width: 767px)" type="image/jpg">
+                                        <!-- Default image -->
+                                        <img src="./images/portfolio/mobile-portfolio-8.jpg" alt="Showcase">
+                                    </picture>
+                                    <p class="portfolio-showcases__caption">Technoduck is a state-of-the-art coronavirus distribution platform. Companies use this platform for digital espionage and attacks on competitors' secure servers.</p>
+                                </div>
+                                <div class="portfolio-showcases__info">
+                                    <h3 class="portfolio-showcases__title">Project LAB</h3>
+                                    <p class="portfolio-showcases__type">Marketing</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="portfolio-showcases__element" data-type="app">
+                            <a class="portfolio-showcases__link" href="/portfolio.html">
+                                <div class="portfolio-showcases__image">
+                                    <picture>
+                                        <!-- Desktop image -->
+                                        <source srcset="./images/portfolio/desktop-portfolio-9.webp 1x, ./images/portfolio/desktop-portfolio-9@2x.webp 2x" media="(min-width: 1200px)" type="image/webp">
+                                        <source srcset="./images/portfolio/desktop-portfolio-9.jpg 1x, ./images/portfolio/desktop-portfolio-9@2x.jpg 2x" media="(min-width: 1200px)" type="image/jpg">
+                                        <!-- Tablet image -->
+                                        <source srcset="./images/portfolio/tablet-portfolio-9.webp 1x, ./images/portfolio/tablet-portfolio-9@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                                        <source srcset="./images/portfolio/tablet-portfolio-9.jpg 1x, ./images/portfolio/tablet-portfolio-9@2x.jpg 2x" media="(min-width: 768px)" type="image/jpg">
+                                        <!-- Mobile image -->
+                                        <source srcset="./images/portfolio/mobile-portfolio-9.webp 1x, ./images/portfolio/mobile-portfolio-9@2x.webp 2x" media="(max-width: 767px)" type="image/webp">
+                                        <source srcset="./images/portfolio/mobile-portfolio-9.jpg 1x, ./images/portfolio/mobile-portfolio-9@2x.jpg 2x" media="(max-width: 767px)" type="image/jpg">
+                                        <!-- Default image -->
+                                        <img src="./images/portfolio/mobile-portfolio-9.jpg" alt="Showcase">
+                                    </picture>
+                                    <p class="portfolio-showcases__caption">Technoduck is a state-of-the-art coronavirus distribution platform. Companies use this platform for digital espionage and attacks on competitors' secure servers.</p>
+                                </div>
+                                <div class="portfolio-showcases__info">
+                                    <h3 class="portfolio-showcases__title">Growing Business</h3>
+                                    <p class="portfolio-showcases__type">Apps</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <!-- Footer Section -->
+        <footer class="section section--footer" id="footer">
+            <div class="container footer__container">
+                <div class="footer__address__wrapper">
+                    <a class="logo footer__logo" href="/">WebStudio</a>
+                    <address class="footer__address">
+                        <p class="footer__address__text">695 Park Ave, New York, NY 10065, United States</p>
+                        <a class="footer__address__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        <a class="footer__address__link" href="tel:+1 212-772-4150">+1 212-772-4150</a>
+                    </address>
+                </div>
+                <div class="footer__socials">
+                    <h3 class="footer__title">find us on</h3>
+                    <ul class="footer__socials__list">
+                        <li class="footer__socials__list__element">
+                            <a class="footer__socials__list__link" href="/">
+                                <svg class="footer__socials__list__icon">
+                                    <use href="./images/sprite.svg#icon-instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer__socials__list__element">
+                            <a class="footer__socials__list__link" href="/">
+                                <svg class="footer__socials__list__icon">
+                                    <use href="./images/sprite.svg#icon-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer__socials__list__element">
+                            <a class="footer__socials__list__link" href="/">
+                                <svg class="footer__socials__list__icon">
+                                    <use href="./images/sprite.svg#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer__socials__list__element">
+                            <a class="footer__socials__list__link" href="/">
+                                <svg class="footer__socials__list__icon">
+                                    <use href="./images/sprite.svg#icon-linkedin"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="subscription">
+                    <h3 class="footer__title">Subscribe to the newsletter</h3>
+                    <form class="subscription__form" action="#">
+                        <input class="subscription__input" placeholder="E-mail" type="email" name="subscription">
+                        <button type="button" class="button subscription__button" type="button">
+                            Subscribe
+                            <svg class="button__icon">
+                                <use href="./images/sprite.svg#icon-paper-plane"></use>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </footer>
+        <script src="./js/index.js" type="module"></script>
     </body>
 </html>

@@ -1,0 +1,192 @@
+@import "../abstracts/mixins";
+
+.section--footer {
+    margin-top: auto;
+    background-color: var(--footer-bg);
+
+    @include desktop {
+        padding: 60px 0 50px;
+    }
+}
+
+.footer__logo {
+    margin-bottom: 13px;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    @include tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: start;
+        justify-content: center;
+    }
+
+    @include desktop {
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+}
+
+.footer__address__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 232px;
+    margin: 0 0 53px 0;
+
+    @include tablet {
+        margin: 0 165px 50px 0;
+    }
+
+    @include desktop {
+        align-items: start;
+        margin: 0 70px 0 0;
+    }
+}
+
+.footer__address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: 0.4px;
+
+    @include desktop {
+        align-items: start;
+    }
+
+    &__text {
+        color: var(--light-text-color);
+        margin-bottom: 8px;
+        text-align: center;
+
+        @include desktop {
+            text-align: unset;
+        }
+    }
+
+    &__link {
+        color: var(--footer-text-color);
+        transition: color var(--transition);
+
+        &:hover, &:focus {
+            color: var(--accent-color);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+}
+
+.footer__title {
+    color: var(--light-text-color);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+
+    @include desktop {
+        text-align: unset;
+    }
+}
+
+.footer__socials {
+    margin-bottom: 60px;
+
+    @include tablet {
+        margin-bottom: unset;
+    }
+
+    @include desktop {
+        margin-right: 93px;
+    }
+}
+
+.footer__socials__list {
+    display: flex;
+    align-items: center;
+
+    &__element {
+        height: 44px;
+        width: 44px;
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        background-color: var(--footer-icon-bg);
+        border-radius: 50%;
+        transition: background-color var(--transition);
+
+        &:hover, &:focus {
+            background-color: var(--accent-color);
+        }
+    }
+
+    &__icon {
+        fill: var(--light-text-color);
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.subscription {
+    width: 100%;
+    max-width: 450px;
+
+    @include desktop {
+        max-width: 570px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include desktop {
+            flex-direction: row;
+            align-items: start;
+        }
+
+    }
+
+    &__input {
+        color: var(--light-text-color);
+        font-size: 16px;
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 20px;
+        background: none;
+        border: 1px solid var(--footer-input-border-color);
+        border-radius: 4px;
+        transition: border var(--transition);
+
+        &:hover, &:focus {
+            border: 1px solid var(--accent-color);
+        }
+
+        @include desktop {
+            margin-bottom: unset;
+            margin-right: 12px;
+        }
+    }
+}
+
+.button__icon {
+    fill: var(--light-text-color);
+    height: 24px;
+    width: 24px;
+    margin-left: 25px;
+}

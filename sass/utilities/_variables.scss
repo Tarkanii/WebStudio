@@ -12,14 +12,21 @@
     --footer-icon-bg: rgba(255, 255, 255, 0.1);
 
     --primary-border-color: rgba(33, 33, 33, 0.2);
+    --secondary-border-color: #ECECEC;
     --footer-input-border-color: rgba(255, 255, 255, 0.3);
 
     --primary-icon-color: #AFB1B8;
+    
+    --hero-overlay-color: rgb(47, 48, 58, 0.4);
     --card-overlay-color: rgb(47, 48, 58, 0.8);
     --modal-overlay-color: rgba(0, 0, 0, 0.2);
 
+    --shadow-color: rgba(0, 0, 0, 0.2);
+
     --primary-font: Roboto, sans-serif;
     --logo-font: Raleway, sans-serif;
+
+    --transition: 200ms ease-in;
 }
 
 $tablet-break-point: 768px;
